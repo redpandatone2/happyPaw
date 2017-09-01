@@ -39,8 +39,7 @@ public class verifyAllLinks extends TestStart{
 	  }	
 	  return finalList;
 	}
-	
-	
+		
 	  public String isLinkBroken(URL url) throws Exception	  
 		{
 			String response = "";
@@ -62,8 +61,7 @@ public class verifyAllLinks extends TestStart{
 	
 	  @Test (groups = {"homepage"},dependsOnMethods = {"openHomePage"})
 	  public  void testLinks() throws Exception {
-		  
-		  
+		  	  
 		  log.info("Opening home page");
 		  List<WebElement> allImages = findLinks(driver);    
 		  log.info("Total number of links found " + allImages.size());
@@ -75,26 +73,11 @@ public class verifyAllLinks extends TestStart{
 		  }
 		     catch(Exception exp)
 		 {
-		     log.warning("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; " + exp.getMessage());	    		
-	 
+		     log.warning("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; " + exp.getMessage());	    			 
+}	 
+}	 
 }
-	 
-}
-	 
-}
-	  
-	     //same on Login page 
-	      @Test (groups = {"homepage"},dependsOnMethods = {"openHomePage"})
-          public  void testLinksLoginPage() throws Exception {
-		  
-	
-	      //opening Homepage/login
-	      String url  = driver.getCurrentUrl() + NamesPages.getLoginpage();
-	      driver.get(url);
-		  webDriver.sleep3();
-	      log.info("Opening Login Page");
-		  
-		  
+
 		  //Finding all links and verifying
 		  List<WebElement> allImages = findLinks(driver);    
 		  log.info("Total number of links found " + allImages.size());
