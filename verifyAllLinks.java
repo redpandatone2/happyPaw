@@ -24,7 +24,7 @@ public class verifyAllLinks extends TestStart{
 	
 	public  List<WebElement> findLinks(WebDriver driver)
 	{
-		
+	
 	 List<WebElement> elementList = new ArrayList<WebElement>();
 	 elementList = driver.findElements(By.tagName("a"));
 	 elementList.addAll(driver.findElements(By.tagName("img")));
@@ -38,7 +38,7 @@ public class verifyAllLinks extends TestStart{
 		  }		  
 	  }	
 	  return finalList;
-	}
+	 }
 		
 	  public String isLinkBroken(URL url) throws Exception	  
 		{
@@ -55,7 +55,7 @@ public class verifyAllLinks extends TestStart{
 			{	 
 				return exp.getMessage();	 
 			}  			
-		}
+		 }
 	  
 	  //Test
 	
@@ -68,9 +68,9 @@ public class verifyAllLinks extends TestStart{
 	 
 		  for( WebElement element : allImages){ 
 			 try 
-	      {
+	         {
      		log.info("URL: " + element.getAttribute("href")+ " returned " + isLinkBroken(new URL(element.getAttribute("href"))));
-		  }
+		 }
 		     catch(Exception exp)
 		 {
 		     log.warning("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; " + exp.getMessage());	    			 
@@ -84,20 +84,16 @@ public class verifyAllLinks extends TestStart{
 	 
 		  for( WebElement element : allImages){ 
 			 try 
-	      {
+	          {
      		log.info("URL: " + element.getAttribute("href")+ " returned " + isLinkBroken(new URL(element.getAttribute("href"))));
 		  }
 		     catch(Exception exp)
-		 {
-		     log.warning("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; " + exp.getMessage());	    		
-	 
+		  {
+		     log.warning("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; " + exp.getMessage());	    			 
+}	 
+}	 
 }
-	 
-}
-	 
-}
-	  
-	  
+	  	  
 	  @AfterClass
 		public void quitDriver() {
 		    driver.quit();
