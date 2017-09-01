@@ -14,4 +14,4 @@ I use page object model to separate elements from tests, for example:
 - file HomePageTestSuite.xml is a suite, that contains a sequence of test to perform for Home Page, and it must be run as TestNG suite, then all dependencies of TestNg will be kept inside the running tests. 
 - after the test run I see all needed information in the console and also it could be gathered by TestNg (or any side) report tools into a separate file. 
 
-- After creating few suites, they can be gatheres into Maven .xml file and be run by Jenkins or manually thrue console. 
+- After creating few suites, they can be gathered into Maven .xml file and be run by Jenkins or manually thru console. 
